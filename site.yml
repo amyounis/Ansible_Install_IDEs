@@ -5,7 +5,7 @@
 
   vars_prompt:
    - name: "Intelij"
-     prompt: " install Intelij (y/n)? "
+     prompt: " install Intelij (y/n)?"
      default: n
    - name: "Eclipse"
      prompt: " install Eclipse (y/n)?"
