@@ -1,0 +1,10 @@
+---
+- name: check input
+  fail:
+   msg: "please enter valid choices (y/n) next time"
+  when: ( Intelij != "y" ) and ( Intelij != "n" ) or
+        ( Eclipse != "y" ) and ( Eclipse != "n" )
+
+- name: cout choises
+  debug:
+   msg: "your choices are Intelij={{Intelij}} , Eclipse={{Eclipse}} "

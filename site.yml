@@ -1,0 +1,21 @@
+---
+- name: test play
+  hosts: all
+  remote_user: abdo
+
+  vars_prompt:
+   - name: "Intelij"
+     prompt: " install Intelij (y/n)? "
+     default: n
+   - name: "Eclipse"
+     prompt: " install Eclipse (y/n)?"
+     default: n
+
+
+  roles:
+   - Check_Input
+   - { role: Intelij, when: Intelij == 'y' or Intelij == 'yes'}
+   - { role: Eclipse, when: Eclipse == 'y' or Eclipse == 'yes'}
+
+
+
