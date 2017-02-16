@@ -1,7 +1,8 @@
 ---
-- name: test play
+- name: Install IDEs
   hosts: all
   remote_user: abdo
+ # gather_facts: False
 
   vars_prompt:
    - name: "Intelij"
@@ -13,9 +14,9 @@
 
 
   roles:
-   - Check_Input
-   - { role: Intelij, when: Intelij == 'y' or Intelij == 'yes'}
-   - { role: Eclipse, when: Eclipse == 'y' or Eclipse == 'yes'}
+   - { role: Check_Input }
+   - { role: Intelij, when: Intelij == 'y' }
+   - { role: Eclipse, when: Eclipse == 'y' }
 
 
 

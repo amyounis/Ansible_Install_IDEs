@@ -1,3 +1,8 @@
 ---
-- name: install Intelij
-  shell: echo "install Intelij"
+- name: install Intelij on RedHat family host {{inventory_hostname}}
+  include : RedHat.yml
+  when: ansible_os_family == "RedHat"
+
+- name: install Intelij on RedHat family host {{inventory_hostname}}
+  include : Debian.yml
+  when: ansible_os_family == "Debian"

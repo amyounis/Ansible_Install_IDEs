@@ -1,0 +1,3 @@
+---
+- name: install Intelij on Debian family host {{inventory_hostname}}
+  debug: msg="install Intelij on Debian family host {{inventory_hostname}}"

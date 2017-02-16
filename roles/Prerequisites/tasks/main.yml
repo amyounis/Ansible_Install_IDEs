@@ -1,0 +1,3 @@
+---
+- name: check and install prerequisites
+  shell: echo "hello prerequisites"

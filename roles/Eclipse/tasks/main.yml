@@ -1,3 +1,4 @@
 ---
 - name: install Eclipse
-  shell: echo "install eclipse"
+  debug:
+   var: Eclipse
